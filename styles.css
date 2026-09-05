@@ -382,9 +382,67 @@ tbody tr:hover {
   background: #fff1cf;
 }
 
-.status--planned {
-  color: #536178;
-  background: #e9edf4;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #17211b;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 14px;
+  font: inherit;
+  font-size: 14px;
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 10px;
+  background: rgb(255 255 255 / 7%);
+  color: #fff;
+  outline: none;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.form-input:hover {
+  border-color: rgb(255 255 255 / 15%);
+}
+
+.form-input:focus {
+  border-color: #baf7cb;
+  background: rgb(255 255 255 / 12%);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: #15251b;
+  background: #baf7cb;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 160ms ease;
+}
+
+.btn:hover {
+  background: #cafbd7;
+}
+
+.btn:focus-visible {
+  outline: 2px solid #3e7651;
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .footer {
