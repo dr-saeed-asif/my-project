@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+          <a class="brand" href="#" aria-label="Acme home">
+            <span class="brand__mark">A</span>
+            <span>Acme</span>
+          </a>
+          <button class="icon-button sidebar__close" id="close-sidebar" type="button" aria-label="Close menu">
+            &times;
+          </button>
+        </div>
+
+        <nav class="nav" aria-label="Main navigation">
+          <a class="nav__link nav__link--active" href="#dashboard" aria-current="page">
+            <span class="nav__icon" aria-hidden="true">&#9638;</span>
+            Dashboard
+          </a>
+          <a class="nav__link" href="#projects">
+            <span class="nav__icon" aria-hidden="true">&#9633;</span>
+            Projects
+          </a>
+          <a class="nav__link" href="#messages">
+            <span class="nav__icon" aria-hidden="true">&#9993;</span>
+            Messages
+            <span class="nav__badge">4</span>
+          </a>
+          <a class="nav__link" href="#analytics">
+            <span class="nav__icon" aria-hidden="true">&#9651;</span>
+            Analytics
+          </a>
+        </nav>
+
+        <div class="sidebar__footer">
+          <a class="nav__link" href="#settings">
+            <span class="nav__icon" aria-hidden="true">&#9881;</span>
+            Settings
+          </a>
+          <div class="profile">
+            <div class="profile__avatar" aria-hidden="true">AK</div>
+            <div>
+              <strong>Alex Kim</strong>
+              <span>alex@example.com</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+      <main class="content">
+        <header class="topbar">
+          <button class="icon-button menu-button" id="open-sidebar" type="button" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <span class="topbar__title">Dashboard</span>
+          <nav class="topbar__nav" aria-label="Secondary navigation">
+            <a class="topbar__link topbar__link--active" href="#dashboard">Overview</a>
+            <a class="topbar__link" href="#activity">Activity</a>
+            <a class="topbar__link" href="#team">Team</a>
+          </nav>
+          <div class="topbar__actions">
+            <button class="notification-button" type="button" aria-label="View notifications">
+              <span aria-hidden="true">&#9675;</span>
+              <span class="notification-button__dot"></span>
+            </button>
+            <button class="topbar__avatar" type="button" aria-label="Open profile menu">AK</button>
+          </div>
+        </header>
+        <section class="welcome" id="dashboard">
+          <p class="eyebrow">Overview</p>
+          <h1>Welcome back, Alex.</h1>
+          <p>Select an item from the sidebar to get started.</p>
+        </section>
+        <section class="table-section" aria-labelledby="projects-heading">
+          <div class="table-section__header">
+            <div>
+              <p class="eyebrow">Workspace</p>
+              <h2 id="projects-heading">Recent projects</h2>
+            </div>
+            <a class="table-section__action" href="#projects">View all</a>
+          </div>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Project</th>
+                  <th scope="col">Owner</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Due date</th>
+                  <th scope="col">Progress</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Website redesign</strong></td>
+                  <td>Maya Chen</td>
+                  <td><span class="status status--active">Active</span></td>
+                  <td>Sep 18, 2026</td>
+                  <td>72%</td>
+                </tr>
+                <tr>
+                  <td><strong>Mobile application</strong></td>
+                  <td>Jordan Lee</td>
+                  <td><span class="status status--review">In review</span></td>
+                  <td>Sep 24, 2026</td>
+                  <td>88%</td>
+                </tr>
+                <tr>
+                  <td><strong>Brand guidelines</strong></td>
+                  <td>Alex Kim</td>
+                  <td><span class="status status--planned">Planned</span></td>
+                  <td>Oct 02, 2026</td>
+                  <td>30%</td>
+                </tr>
+                <tr>
+                  <td><strong>Client portal</strong></td>
+                  <td>Sam Rivera</td>
+                  <td><span class="status status--active">Active</span></td>
+                  <td>Oct 12, 2026</td>
+                  <td>54%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <footer class="footer">
+          <p>&copy; 2026 Acme. All rights reserved.</p>
+          <nav class="footer__nav" aria-label="Footer navigation">
+            <a href="#privacy">Privacy</a>
+            <a href="#terms">Terms</a>
+            <a href="#support">Support</a>
+          </nav>
+        </footer>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

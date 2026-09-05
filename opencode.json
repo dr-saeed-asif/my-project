@@ -1,0 +1,6 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "file:///H:/aqibDev/opencode-works/TraceForge/packages/adapter-opencode/dist/operational-plugin.js"
+  ]
+}
